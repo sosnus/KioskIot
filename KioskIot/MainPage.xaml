@@ -9,6 +9,14 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Height="80" >
+                <TextBlock Text=".   IOT-TUL Dashboard   ." FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <TextBlock Text="Open Dashboard on Your device! http://40.85.113.214:3000 Login: test Password: test Project homepage: http://iot-tul.p.lodz.pl/" FontWeight="Bold" VerticalAlignment="Center"/>
+                <Button Margin="10,5" Content="Refresh page" Click="Button_Click"/>
+                <TextBlock Text=".   Loading...   ." FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Blue" Name="tblPageStatus"/>
+            </StackPanel>
+            <WebView Name="WebView1" Width="Auto" LoadCompleted="WebView1_LoadCompleted" Height="900"/>
+        </StackPanel>
     </Grid>
 </Page>
